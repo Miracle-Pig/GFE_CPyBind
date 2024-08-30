@@ -20,8 +20,6 @@ include_directories(
 )  
 link_directories(  
     ${TRD_PARTY}/GFE_API/lib
-    ${TRD_PARTY}/GFE_Utility/lib
-    $ENV{TRD_ROOT}/sqlite3/lib
 )  
 
 file(GLOB HEADER
@@ -41,8 +39,6 @@ Pybind11_add_module(${PROJECT_NAME}
 )
 target_link_libraries(${PROJECT_NAME} 
 PRIVATE 
-    sqlite3
-    GFE_Utility
     GFE_API
 )  
 
