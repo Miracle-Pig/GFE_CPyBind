@@ -9,3 +9,6 @@ import GFE
 db_path = "C:/Users/GZYL-11/Desktop/Model-1-DYNX-nonl0814-2.db"
 db = GFE.Post.open(db_path, False)
 print(GFE.Post.getNodeNum(db))
+
+data = GFE.Post.FO.GetData(db, "U U1", True, 1)
+print(data[1])

@@ -13,7 +13,8 @@ set(TRD_PARTY E:/SHW/WorkSpace/3rdParty-src-win/install)
 set(MOD_NAME GFE)
 set(INSTALL_DIR ${PROJECT_SOURCE_DIR}/install)
 
-include_directories(     
+include_directories(
+    ${PROJECT_SOURCE_DIR}     
     ${TRD_PARTY}/GFE_API/include 
     ${TRD_PARTY}/GFE_API/include/Private
     ${TRD_PARTY}/GFE_Utility/include
@@ -27,11 +28,15 @@ link_directories(
 file(GLOB HEADER
     "*.h"
     "Post/*.h"
+    "Post/Private/*.h"
+    "Post/GFE_Struct/*.h"
 )
 
 file(GLOB SRC
     "*.cpp"
     "Post/*.cpp"
+    "Post/Private/*.cpp"
+    "Post/GFE_Struct/*.cpp"
 )
 
 set(PYTHON EXECUTABLE Extern/python3.8/python.exe)
