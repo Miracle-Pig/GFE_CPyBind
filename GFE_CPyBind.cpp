@@ -18,8 +18,14 @@ PYBIND11_MODULE(GFE, GFE_MOD)
     // class
     py::class_<GFE::GridData>(POST_FO_MOD, "GridData")
         .def(py::init<>())
-        .def("GetGridSize", &GFE::GridData::GetGridSize);
+        .def("GetGridSize", &GFE::GridData::GetGridSize)
+        .def("GetRange", py::overload_cast<>(&GFE::GridData::GetRange, py::const_))
+        .def("GetRange", py::overload_cast<const std::vector<int>&, bool>(&GFE::GridData::GetRange, py::const_));
     // func
     POST_FO_MOD.def("GetData", &Post::FO::GetData);
-    POST_FO_MOD.def("GetData_Node", &Post::FO::GetData_Node);
+    POST_FO_MOD.def("GetData_Node", &Post::FO::GetData_Node,
+                    py::arg("db"),
+                    py::arg("variable"),
+                    py::arg("frame"),
+                    py::arg("inc_sm") = 0);
 }
