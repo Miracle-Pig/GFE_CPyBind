@@ -12,3 +12,6 @@ print(GFE.Post.getNodeNum(db))
 
 data = GFE.Post.FO.GetData(db, "U U1", True, 1)
 print(data[1])
+print(111)
+grid_data = GFE.Post.FO.GetData_Node(db, "U U1", 1, False)
+print(grid_data.GetGridSize())

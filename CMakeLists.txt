@@ -17,6 +17,7 @@ include_directories(
     ${PROJECT_SOURCE_DIR}     
     ${TRD_PARTY}/GFE_API/include 
     ${TRD_PARTY}/GFE_API/include/Private
+    ${TRD_PARTY}/GFE_API/include/GFE_Struct
     ${TRD_PARTY}/GFE_Utility/include
     $ENV{TRD_ROOT}/sqlite_orm
     $ENV{TRD_ROOT}/sqlite3/include
