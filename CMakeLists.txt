@@ -9,7 +9,7 @@ if(CMAKE_SYSTEM_NAME MATCHES "Windows")
 add_compile_options(-bigobj)
 endif()
 
-set(TRD_PARTY E:/SHW/WorkSpace/3rdParty-src-win/install)
+set(TRD_PARTY E:/SHW/WorkSpace/3rdParty-src-win/GFE_CPyBind/Extern)
 set(MOD_NAME GFE)
 set(INSTALL_DIR ${PROJECT_SOURCE_DIR}/install)
 
